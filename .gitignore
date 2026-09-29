@@ -1,0 +1,24 @@
+# WordPress Core & Configurations
+wp-config.php
+.htaccess
+*.log
+
+# Sensitive credentials & DB Dumps
+*.sql
+*.sql.gz
+*.env
+.env.*
+
+# Media and Uploads (handled via CDN/Storage)
+/wp-content/uploads/
+/wp-content/upgrade/
+/wp-content/cache/
+
+# Vendor & Node modules
+/vendor/
+/node_modules/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+desktop.ini

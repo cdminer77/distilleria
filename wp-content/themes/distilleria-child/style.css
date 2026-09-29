@@ -1,0 +1,57 @@
+/*
+Theme Name: Distilleria AfterBit Child
+Theme URI: https://test100.afterbit.it
+Description: Tema child personalizzato per il portale e-commerce e catalogo della Distilleria AfterBit.
+Author: AfterBit
+Author URI: https://afterbit.it
+Template: astra
+Version: 1.0.0
+Text Domain: distilleria-child
+*/
+
+/* Personalizzazioni CSS Distilleria */
+:root {
+    --distilleria-gold: #d4af37;
+    --distilleria-dark: #1a1918;
+    --distilleria-amber: #8b5a2b;
+    --distilleria-cream: #f8f6f0;
+}
+
+.distilleria-hero {
+    background-color: var(--distilleria-dark);
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.distilleria-badge {
+    background: var(--distilleria-gold);
+    color: var(--distilleria-dark);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Badge prezzi e carrello */
+.woocommerce ul.products li.product .price {
+    color: var(--distilleria-amber);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+    background-color: var(--distilleria-amber);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+    background-color: #6d441e;
+}
