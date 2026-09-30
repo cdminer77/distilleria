@@ -11,14 +11,14 @@ if (!defined('ABSPATH')) {
 add_action('wp_enqueue_scripts', 'distilleria_child_enqueue_styles');
 function distilleria_child_enqueue_styles() {
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
-    wp_enqueue_style('child-style', get_stylesheet_uri(), ['parent-style'], '1.1.0');
+    wp_enqueue_style('child-style', get_stylesheet_uri(), array('parent-style'), '1.1.0');
 }
 
 // Shortcode Hero Slider [distilleria_hero_slider]
 add_shortcode('distilleria_hero_slider', 'distilleria_render_hero_slider');
 function distilleria_render_hero_slider() {
-    $slides = [
-        [
+    $slides = array(
+        array(
             'badge' => 'Tradizione & Artigianalità',
             'title' => 'Distilleria &amp; <span>Liquorificio Artigianale</span>',
             'desc'  => 'L'arte della distillazione italiana e la passione per gli infusi tradizionali. Amari, grappe, gin botanici e grandi classici 100% naturali.',
@@ -27,8 +27,8 @@ function distilleria_render_hero_slider() {
             'btn1_url'  => '/negozio/',
             'btn2_text' => 'La Nostra Storia',
             'btn2_url'  => '/chi-siamo/'
-        ],
-        [
+        ),
+        array(
             'badge' => 'Macerazione Lenta a Freddo',
             'title' => 'Amari d'Erbe <span>Alpine &amp; Radici Selvagge</span>',
             'desc'  => 'Oltre 28 erbe alpine, genziana, rabarbaro e assenzio per un bouquet digestivo intenso, persistente e balsamico.',
@@ -37,8 +37,8 @@ function distilleria_render_hero_slider() {
             'btn1_url'  => '/categoria-prodotto/amari-digestivi/',
             'btn2_text' => 'Tutti i Prodotti',
             'btn2_url'  => '/negozio/'
-        ],
-        [
+        ),
+        array(
             'badge' => 'Distillazione in Alambicco di Rame',
             'title' => 'Grappe Barricate <span>Invecchiate in Rovere</span>',
             'desc'  => 'Grappa monovitigno distillata a bagnomaria e affinata 5 anni in fusti di rovere francese con note calde di vaniglia e cacao.',
@@ -47,8 +47,8 @@ function distilleria_render_hero_slider() {
             'btn1_url'  => '/categoria-prodotto/grappe-distillati/',
             'btn2_text' => 'Acquista Online',
             'btn2_url'  => '/negozio/'
-        ],
-        [
+        ),
+        array(
             'badge' => 'Esperienze & Visite Guidate',
             'title' => 'Percorsi di Degustazione <span>&amp; Visite in Bottega</span>',
             'desc'  => 'Prenota una visita esclusiva ai nostri alambicchi in rame e degusta i migliori distillati guidato dal nostro Mastro Distillatore.',
@@ -57,8 +57,8 @@ function distilleria_render_hero_slider() {
             'btn1_url'  => '/contatti/',
             'btn2_text' => 'Contattaci',
             'btn2_url'  => '/contatti/'
-        ]
-    ];
+        )
+    );
 
     ob_start();
     ?>
