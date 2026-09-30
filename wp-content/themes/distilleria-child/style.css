@@ -5,35 +5,248 @@ Description: Tema child personalizzato per il portale e-commerce e catalogo dell
 Author: AfterBit
 Author URI: https://afterbit.it
 Template: astra
-Version: 1.0.0
+Version: 1.1.0
 Text Domain: distilleria-child
 */
 
 /* Personalizzazioni CSS Distilleria */
 :root {
     --distilleria-gold: #d4af37;
+    --distilleria-gold-hover: #b8972e;
     --distilleria-dark: #1a1918;
     --distilleria-amber: #8b5a2b;
     --distilleria-cream: #f8f6f0;
 }
 
-.distilleria-hero {
-    background-color: var(--distilleria-dark);
-    color: #ffffff;
-    padding: 60px 20px;
-    text-align: center;
+/* ==========================================================================
+   HERO SLIDER STYLES
+   ========================================================================== */
+.distilleria-slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    background: #111;
+    min-height: 520px;
 }
 
-.distilleria-badge {
+.distilleria-slides-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 520px;
+}
+
+.distilleria-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 520px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    transform: scale(1.03);
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.distilleria-slide.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    z-index: 2;
+}
+
+.distilleria-slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(20, 18, 16, 0.72) 0%, rgba(20, 18, 16, 0.88) 100%);
+    z-index: 2;
+}
+
+.distilleria-slide-content {
+    position: relative;
+    z-index: 3;
+    max-width: 900px;
+    padding: 40px 20px;
+    text-align: center;
+    color: #ffffff;
+    animation: fadeInSlideUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.distilleria-slide-badge {
+    display: inline-block;
+    background: rgba(212, 175, 55, 0.2);
+    color: var(--distilleria-gold);
+    border: 1px solid var(--distilleria-gold);
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.distilleria-slide-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.15;
+    margin: 0 0 16px 0;
+    font-family: inherit;
+}
+
+.distilleria-slide-title span {
+    color: var(--distilleria-gold);
+}
+
+.distilleria-slide-desc {
+    font-size: 1.25rem;
+    color: #e4dfd7;
+    max-width: 750px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+}
+
+.distilleria-slide-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.distilleria-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.distilleria-btn-primary {
+    background-color: var(--distilleria-gold);
+    color: var(--distilleria-dark) !important;
+    border: 2px solid var(--distilleria-gold);
+}
+
+.distilleria-btn-primary:hover {
+    background-color: var(--distilleria-gold-hover);
+    border-color: var(--distilleria-gold-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(212, 175, 55, 0.3);
+}
+
+.distilleria-btn-outline {
+    background-color: transparent;
+    color: #ffffff !important;
+    border: 2px solid #ffffff;
+}
+
+.distilleria-btn-outline:hover {
+    background-color: #ffffff;
+    color: var(--distilleria-dark) !important;
+    transform: translateY(-2px);
+}
+
+/* Navigazione Frecce */
+.distilleria-slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 10;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.distilleria-slider-arrow:hover {
     background: var(--distilleria-gold);
     color: var(--distilleria-dark);
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    font-weight: 600;
+    border-color: var(--distilleria-gold);
 }
 
-/* Badge prezzi e carrello */
+.distilleria-arrow-prev {
+    left: 20px;
+}
+
+.distilleria-arrow-next {
+    right: 20px;
+}
+
+/* Indicatori / Dots */
+.distilleria-slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.distilleria-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    padding: 0;
+}
+
+.distilleria-dot.active {
+    background: var(--distilleria-gold);
+    width: 32px;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .distilleria-slide-title {
+        font-size: 2.1rem;
+    }
+    .distilleria-slide-desc {
+        font-size: 1.05rem;
+    }
+    .distilleria-slider-arrow {
+        display: none;
+    }
+}
+
+/* WooCommerce Badge & Cards */
 .woocommerce ul.products li.product .price {
     color: var(--distilleria-amber);
     font-size: 1.15rem;
