@@ -19,44 +19,44 @@ add_shortcode('distilleria_hero_slider', 'distilleria_render_hero_slider');
 function distilleria_render_hero_slider() {
     $slides = array(
         array(
-            'badge' => 'Tradizione & Artigianalità',
-            'title' => 'Distilleria &amp; <span>Liquorificio Artigianale</span>',
-            'desc'  => 'L'arte della distillazione italiana e la passione per gli infusi tradizionali. Amari, grappe, gin botanici e grandi classici 100% naturali.',
-            'image' => 'https://images.unsplash.com/photo-1527061011665-3652c757a4d4?w=1600&q=80',
-            'btn1_text' => 'Esplora i Nostri Liquori',
-            'btn1_url'  => '/negozio/',
-            'btn2_text' => 'La Nostra Storia',
-            'btn2_url'  => '/chi-siamo/'
+            'badge' => "Tradizione & Artigianalità",
+            'title' => "Distilleria &amp; <span>Liquorificio Artigianale</span>",
+            'desc'  => "L'arte della distillazione italiana e la passione per gli infusi tradizionali. Amari, grappe, gin botanici e grandi classici 100% naturali.",
+            'image' => "https://images.unsplash.com/photo-1527061011665-3652c757a4d4?w=1600&q=80",
+            'btn1_text' => "Esplora i Nostri Liquori",
+            'btn1_url'  => "/negozio/",
+            'btn2_text' => "La Nostra Storia",
+            'btn2_url'  => "/chi-siamo/"
         ),
         array(
-            'badge' => 'Macerazione Lenta a Freddo',
-            'title' => 'Amari d'Erbe <span>Alpine &amp; Radici Selvagge</span>',
-            'desc'  => 'Oltre 28 erbe alpine, genziana, rabarbaro e assenzio per un bouquet digestivo intenso, persistente e balsamico.',
-            'image' => 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1600&q=80',
-            'btn1_text' => 'Scopri gli Amari',
-            'btn1_url'  => '/categoria-prodotto/amari-digestivi/',
-            'btn2_text' => 'Tutti i Prodotti',
-            'btn2_url'  => '/negozio/'
+            'badge' => "Macerazione Lenta a Freddo",
+            'title' => "Amari d'Erbe <span>Alpine &amp; Radici Selvagge</span>",
+            'desc'  => "Oltre 28 erbe alpine, genziana, rabarbaro e assenzio per un bouquet digestivo intenso, persistente e balsamico.",
+            'image' => "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1600&q=80",
+            'btn1_text' => "Scopri gli Amari",
+            'btn1_url'  => "/categoria-prodotto/amari-digestivi/",
+            'btn2_text' => "Tutti i Prodotti",
+            'btn2_url'  => "/negozio/"
         ),
         array(
-            'badge' => 'Distillazione in Alambicco di Rame',
-            'title' => 'Grappe Barricate <span>Invecchiate in Rovere</span>',
-            'desc'  => 'Grappa monovitigno distillata a bagnomaria e affinata 5 anni in fusti di rovere francese con note calde di vaniglia e cacao.',
-            'image' => 'https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=1600&q=80',
-            'btn1_text' => 'Scopri le Grappe',
-            'btn1_url'  => '/categoria-prodotto/grappe-distillati/',
-            'btn2_text' => 'Acquista Online',
-            'btn2_url'  => '/negozio/'
+            'badge' => "Distillazione in Alambicco di Rame",
+            'title' => "Grappe Barricate <span>Invecchiate in Rovere</span>",
+            'desc'  => "Grappa monovitigno distillata a bagnomaria e affinata 5 anni in fusti di rovere francese con note calde di vaniglia e cacao.",
+            'image' => "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=1600&q=80",
+            'btn1_text' => "Scopri le Grappe",
+            'btn1_url'  => "/categoria-prodotto/grappe-distillati/",
+            'btn2_text' => "Acquista Online",
+            'btn2_url'  => "/negozio/"
         ),
         array(
-            'badge' => 'Esperienze & Visite Guidate',
-            'title' => 'Percorsi di Degustazione <span>&amp; Visite in Bottega</span>',
-            'desc'  => 'Prenota una visita esclusiva ai nostri alambicchi in rame e degusta i migliori distillati guidato dal nostro Mastro Distillatore.',
-            'image' => 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1600&q=80',
-            'btn1_text' => 'Prenota Degustazione',
-            'btn1_url'  => '/contatti/',
-            'btn2_text' => 'Contattaci',
-            'btn2_url'  => '/contatti/'
+            'badge' => "Esperienze & Visite Guidate",
+            'title' => "Percorsi di Degustazione <span>&amp; Visite in Bottega</span>",
+            'desc'  => "Prenota una visita esclusiva ai nostri alambicchi in rame e degusta i migliori distillati guidato dal nostro Mastro Distillatore.",
+            'image' => "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1600&q=80",
+            'btn1_text' => "Prenota Degustazione",
+            'btn1_url'  => "/contatti/",
+            'btn2_text' => "Contattaci",
+            'btn2_url'  => "/contatti/"
         )
     );
 
