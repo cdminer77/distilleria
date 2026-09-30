@@ -11,10 +11,10 @@ if (!defined('ABSPATH')) {
 add_action('wp_enqueue_scripts', 'distilleria_child_enqueue_styles');
 function distilleria_child_enqueue_styles() {
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
-    wp_enqueue_style('child-style', get_stylesheet_uri(), array('parent-style'), '1.1.0');
+    wp_enqueue_style('child-style', get_stylesheet_uri(), array('parent-style'), '1.2.0');
 }
 
-// Shortcode Hero Slider [distilleria_hero_slider]
+// Shortcode Hero Slider a tutta larghezza [distilleria_hero_slider]
 add_shortcode('distilleria_hero_slider', 'distilleria_render_hero_slider');
 function distilleria_render_hero_slider() {
     $slides = array(
@@ -169,7 +169,7 @@ function distilleria_render_hero_slider() {
         container.addEventListener('mouseenter', stopAutoPlay);
         container.addEventListener('mouseleave', startAutoPlay);
 
-        // Touch swipe support for mobile
+        // Supporto swipe touch su mobile
         let touchStartX = 0;
         let touchEndX = 0;
 
@@ -195,10 +195,17 @@ function distilleria_render_hero_slider() {
     return ob_get_clean();
 }
 
-// Personalizzazioni WooCommerce specifiche per la distilleria
+// Modifica testo pulsante acquisto WooCommerce in "Acquista"
 add_filter('woocommerce_product_add_to_cart_text', 'distilleria_custom_cart_button_text');
+add_filter('woocommerce_product_single_add_to_cart_text', 'distilleria_custom_cart_button_text');
 function distilleria_custom_cart_button_text() {
-    return __('Acquista Bottiglia', 'distilleria-child');
+    return __('Acquista', 'distilleria-child');
+}
+
+// Personalizzazione Footer Copyright (Rimuove "Powered by Astra")
+add_filter('astra_footer_copyright_content', 'distilleria_custom_footer_copyright');
+function distilleria_custom_footer_copyright($content) {
+    return '&copy; ' . date('Y') . ' <strong>Distilleria AfterBit</strong> - Tutti i diritti riservati.';
 }
 
 // Avviso di spedizione e gradazione alcolica nella scheda prodotto

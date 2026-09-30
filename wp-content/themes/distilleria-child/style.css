@@ -5,35 +5,64 @@ Description: Tema child personalizzato per il portale e-commerce e catalogo dell
 Author: AfterBit
 Author URI: https://afterbit.it
 Template: astra
-Version: 1.1.0
+Version: 1.2.0
 Text Domain: distilleria-child
 */
 
-/* Personalizzazioni CSS Distilleria */
+/* ==========================================================================
+   VARIABILI & IMPOSTAZIONI GLOBALI
+   ========================================================================== */
 :root {
-    --distilleria-gold: #d4af37;
-    --distilleria-gold-hover: #b8972e;
+    --distilleria-gold: #c59b27;
+    --distilleria-gold-hover: #a88219;
     --distilleria-dark: #1a1918;
     --distilleria-amber: #8b5a2b;
+    --distilleria-amber-hover: #6d441e;
     --distilleria-cream: #f8f6f0;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 /* ==========================================================================
-   HERO SLIDER STYLES
+   RIMOZIONE TITOLO "HOME" SULLA FRONT PAGE
+   ========================================================================== */
+.home .entry-title,
+.home .ast-page-title,
+.home header.entry-header,
+.home .ast-article-single .entry-header {
+    display: none !important;
+}
+
+.home.page .site-content {
+    padding-top: 0 !important;
+}
+
+.home .site-content > .ast-container {
+    padding-top: 0 !important;
+}
+
+/* ==========================================================================
+   HERO SLIDER A TUTTA LARGHEZZA PAGINA (100vw Full-Width)
    ========================================================================== */
 .distilleria-slider-container {
     position: relative;
-    width: 100%;
-    max-width: 100%;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: 100vw;
     overflow: hidden;
     background: #111;
-    min-height: 520px;
+    min-height: 560px;
 }
 
 .distilleria-slides-wrapper {
     position: relative;
     width: 100%;
-    min-height: 520px;
+    min-height: 560px;
 }
 
 .distilleria-slide {
@@ -42,7 +71,7 @@ Text Domain: distilleria-child
     left: 0;
     width: 100%;
     height: 100%;
-    min-height: 520px;
+    min-height: 560px;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
@@ -68,15 +97,15 @@ Text Domain: distilleria-child
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(20, 18, 16, 0.72) 0%, rgba(20, 18, 16, 0.88) 100%);
+    background: linear-gradient(180deg, rgba(20, 18, 16, 0.68) 0%, rgba(20, 18, 16, 0.88) 100%);
     z-index: 2;
 }
 
 .distilleria-slide-content {
     position: relative;
     z-index: 3;
-    max-width: 900px;
-    padding: 40px 20px;
+    max-width: 950px;
+    padding: 50px 20px;
     text-align: center;
     color: #ffffff;
     animation: fadeInSlideUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -95,24 +124,24 @@ Text Domain: distilleria-child
 
 .distilleria-slide-badge {
     display: inline-block;
-    background: rgba(212, 175, 55, 0.2);
+    background: rgba(197, 155, 39, 0.18);
     color: var(--distilleria-gold);
     border: 1px solid var(--distilleria-gold);
-    padding: 6px 16px;
+    padding: 6px 18px;
     border-radius: 30px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 .distilleria-slide-title {
-    font-size: 3.2rem;
+    font-size: 3.4rem;
     font-weight: 700;
     color: #ffffff;
     line-height: 1.15;
-    margin: 0 0 16px 0;
+    margin: 0 0 18px 0;
     font-family: inherit;
 }
 
@@ -123,9 +152,9 @@ Text Domain: distilleria-child
 .distilleria-slide-desc {
     font-size: 1.25rem;
     color: #e4dfd7;
-    max-width: 750px;
-    margin: 0 auto 30px auto;
-    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 32px auto;
+    line-height: 1.65;
 }
 
 .distilleria-slide-buttons {
@@ -137,7 +166,7 @@ Text Domain: distilleria-child
 
 .distilleria-btn {
     display: inline-block;
-    padding: 14px 32px;
+    padding: 14px 34px;
     font-size: 1.05rem;
     font-weight: 600;
     border-radius: 4px;
@@ -156,7 +185,7 @@ Text Domain: distilleria-child
     background-color: var(--distilleria-gold-hover);
     border-color: var(--distilleria-gold-hover);
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 6px 18px rgba(197, 155, 39, 0.35);
 }
 
 .distilleria-btn-outline {
@@ -171,22 +200,22 @@ Text Domain: distilleria-child
     transform: translateY(-2px);
 }
 
-/* Navigazione Frecce */
+/* Frecce Navigazione Slider */
 .distilleria-slider-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.45);
     color: #ffffff;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    width: 48px;
-    height: 48px;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     z-index: 10;
     transition: all 0.3s ease;
     user-select: none;
@@ -199,17 +228,16 @@ Text Domain: distilleria-child
 }
 
 .distilleria-arrow-prev {
-    left: 20px;
+    left: 30px;
 }
 
 .distilleria-arrow-next {
-    right: 20px;
+    right: 30px;
 }
 
-/* Indicatori / Dots */
 .distilleria-slider-dots {
     position: absolute;
-    bottom: 20px;
+    bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -221,7 +249,7 @@ Text Domain: distilleria-child
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.45);
     cursor: pointer;
     transition: all 0.3s ease;
     border: none;
@@ -230,11 +258,16 @@ Text Domain: distilleria-child
 
 .distilleria-dot.active {
     background: var(--distilleria-gold);
-    width: 32px;
+    width: 34px;
     border-radius: 10px;
 }
 
 @media (max-width: 768px) {
+    .distilleria-slider-container,
+    .distilleria-slides-wrapper,
+    .distilleria-slide {
+        min-height: 480px;
+    }
     .distilleria-slide-title {
         font-size: 2.1rem;
     }
@@ -246,25 +279,59 @@ Text Domain: distilleria-child
     }
 }
 
-/* WooCommerce Badge & Cards */
+/* ==========================================================================
+   PULSANTI "ACQUISTA" E WOOCOMMERCE (Colore Marrone/Ambra Dorato)
+   ========================================================================== */
+.woocommerce ul.products li.product .button,
+.woocommerce ul.products li.product .add_to_cart_button,
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt,
+.woocommerce .single_add_to_cart_button,
+.woocommerce .button.add_to_cart_button {
+    background-color: var(--distilleria-amber) !important;
+    color: #ffffff !important;
+    border: 1px solid var(--distilleria-amber) !important;
+    padding: 10px 22px !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    border-radius: 4px !important;
+    letter-spacing: 0.5px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 6px rgba(139, 90, 43, 0.25) !important;
+}
+
+.woocommerce ul.products li.product .button:hover,
+.woocommerce ul.products li.product .add_to_cart_button:hover,
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover,
+.woocommerce .single_add_to_cart_button:hover,
+.woocommerce .button.add_to_cart_button:hover {
+    background-color: var(--distilleria-amber-hover) !important;
+    border-color: var(--distilleria-amber-hover) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 5px 14px rgba(109, 68, 30, 0.35) !important;
+}
+
 .woocommerce ul.products li.product .price {
     color: var(--distilleria-amber);
     font-size: 1.15rem;
     font-weight: 700;
 }
 
-.woocommerce #respond input#submit.alt,
-.woocommerce a.button.alt,
-.woocommerce button.button.alt,
-.woocommerce input.button.alt {
-    background-color: var(--distilleria-amber);
-    border-radius: 4px;
-    transition: all 0.3s ease;
+/* ==========================================================================
+   RIMOZIONE CREDITI FOOTER "POWERED BY ASTRA"
+   ========================================================================== */
+.ast-footer-copyright a[href*="wpastra"],
+.ast-footer-copyright a[href*="wordpress.org"],
+.ast-footer-copyright a[href*="brainstormforce"] {
+    display: none !important;
 }
 
-.woocommerce #respond input#submit.alt:hover,
-.woocommerce a.button.alt:hover,
-.woocommerce button.button.alt:hover,
-.woocommerce input.button.alt:hover {
-    background-color: #6d441e;
+.ast-footer-copyright {
+    color: #888888;
+    font-size: 0.9rem;
 }

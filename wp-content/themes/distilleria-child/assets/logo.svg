@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80" width="420" height="80">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e5c158" />
+      <stop offset="50%" stop-color="#c59b27" />
+      <stop offset="100%" stop-color="#9a7212" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Emblem: Stylized Alembic / Bottle -->
+  <g transform="translate(10, 10)">
+    <!-- Shield / Badge Outer -->
+    <path d="M30 2 L52 14 L52 38 Q52 54 30 60 Q8 54 8 38 L8 14 Z" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" />
+    
+    <!-- Alembic / Drop Silhouette inside -->
+    <path d="M30 14 C27 20 20 28 20 38 C20 44 24.5 48 30 48 C35.5 48 40 44 40 38 C40 28 33 20 30 14 Z" fill="url(#goldGrad)" />
+    
+    <!-- Star / Sparkle on top -->
+    <polygon points="30,6 31.5,10 35.5,10.5 32.5,13 33.5,17 30,14.5 26.5,17 27.5,13 24.5,10.5 28.5,10" fill="#c59b27" />
+  </g>
+  
+  <!-- Typography -->
+  <text x="78" y="38" font-family="'Cinzel', 'Playfair Display', 'Georgia', serif" font-size="24" font-weight="700" letter-spacing="2.5" fill="#1a1918">DISTILLERIA</text>
+  <text x="272" y="38" font-family="'Cinzel', 'Playfair Display', 'Georgia', serif" font-size="24" font-weight="700" letter-spacing="2" fill="url(#goldGrad)">AFTERBIT</text>
+  
+  <line x1="78" y1="46" x2="385" y2="46" stroke="url(#goldGrad)" stroke-width="1.2" opacity="0.8" />
+  
+  <text x="78" y="60" font-family="'Montserrat', 'Helvetica Neue', sans-serif" font-size="9" font-weight="600" letter-spacing="3.5" fill="#8b5a2b">LIQUORIFICIO &amp; SPIRITS ARTIGIANALI</text>
+</svg>
