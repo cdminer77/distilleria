@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distilleria AfterBit – Liquorificio Artigianale &amp; Distillati d'Eccellenza</title>
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-wrapper">
+                <img src="assets/logo.svg" alt="Distilleria AfterBit Logo">
+            </a>
+            <nav class="main-nav">
+                <a href="index.html" class="active">Home</a>
+                <a href="negozio.html" class="">I Nostri Liquori</a>
+                <a href="negozio.html?cat=amari-digestivi">Amari &amp; Digestivi</a>
+                <a href="negozio.html?cat=grappe-distillati">Grappe &amp; Distillati</a>
+                <a href="chi-siamo.html" class="">Chi Siamo</a>
+                <a href="contatti.html" class="">Degustazioni &amp; Contatti</a>
+            </nav>
+            <button class="cart-button-header" aria-label="Visualizza carrello">
+                <span>🛒 Carrello</span>
+                <span class="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+    
+
+    <!-- HERO SLIDER FULL-WIDTH -->
+    <div class="distilleria-slider-container" id="distilleriaHeroSlider">
+        <div class="distilleria-slides-wrapper">
+            <div class="distilleria-slide active" style="background-image: url('https://images.unsplash.com/photo-1527061011665-3652c757a4d4?w=1600&q=80');" data-slide="0">
+                <div class="distilleria-slide-overlay"></div>
+                <div class="distilleria-slide-content">
+                    <span class="distilleria-slide-badge">Tradizione &amp; Artigianalità</span>
+                    <h1 class="distilleria-slide-title">Distilleria &amp; <span>Liquorificio Artigianale</span></h1>
+                    <p class="distilleria-slide-desc">L'arte della distillazione italiana e la passione per gli infusi tradizionali. Amari, grappe, gin botanici e grandi classici 100% naturali.</p>
+                    <div class="distilleria-slide-buttons">
+                        <a href="negozio.html" class="distilleria-btn distilleria-btn-primary">Esplora i Nostri Liquori</a>
+                        <a href="chi-siamo.html" class="distilleria-btn distilleria-btn-outline">La Nostra Storia</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="distilleria-slide" style="background-image: url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1600&q=80');" data-slide="1">
+                <div class="distilleria-slide-overlay"></div>
+                <div class="distilleria-slide-content">
+                    <span class="distilleria-slide-badge">Macerazione Lenta a Freddo</span>
+                    <h2 class="distilleria-slide-title">Amari d'Erbe <span>Alpine &amp; Radici Selvagge</span></h2>
+                    <p class="distilleria-slide-desc">Oltre 28 erbe alpine, genziana, rabarbaro e assenzio per un bouquet digestivo intenso, persistente e balsamico.</p>
+                    <div class="distilleria-slide-buttons">
+                        <a href="negozio.html?cat=amari-digestivi" class="distilleria-btn distilleria-btn-primary">Scopri gli Amari</a>
+                        <a href="negozio.html" class="distilleria-btn distilleria-btn-outline">Tutti i Prodotti</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="distilleria-slide" style="background-image: url('https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=1600&q=80');" data-slide="2">
+                <div class="distilleria-slide-overlay"></div>
+                <div class="distilleria-slide-content">
+                    <span class="distilleria-slide-badge">Distillazione in Alambicco di Rame</span>
+                    <h2 class="distilleria-slide-title">Grappe Barricate <span>Invecchiate in Rovere</span></h2>
+                    <p class="distilleria-slide-desc">Grappa monovitigno distillata a bagnomaria e affinata 5 anni in fusti di rovere francese con note calde di vaniglia e cacao.</p>
+                    <div class="distilleria-slide-buttons">
+                        <a href="negozio.html?cat=grappe-distillati" class="distilleria-btn distilleria-btn-primary">Scopri le Grappe</a>
+                        <a href="negozio.html" class="distilleria-btn distilleria-btn-outline">Acquista Online</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="distilleria-slide" style="background-image: url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1600&q=80');" data-slide="3">
+                <div class="distilleria-slide-overlay"></div>
+                <div class="distilleria-slide-content">
+                    <span class="distilleria-slide-badge">Esperienze &amp; Visite Guidate</span>
+                    <h2 class="distilleria-slide-title">Percorsi di Degustazione <span>&amp; Visite in Bottega</span></h2>
+                    <p class="distilleria-slide-desc">Prenota una visita esclusiva ai nostri alambicchi in rame e degusta i migliori distillati guidato dal nostro Mastro Distillatore.</p>
+                    <div class="distilleria-slide-buttons">
+                        <a href="contatti.html" class="distilleria-btn distilleria-btn-primary">Prenota Degustazione</a>
+                        <a href="contatti.html" class="distilleria-btn distilleria-btn-outline">Contattaci</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="distilleria-slider-arrow distilleria-arrow-prev" id="sliderPrev" aria-label="Precedente">&#10094;</button>
+        <button class="distilleria-slider-arrow distilleria-arrow-next" id="sliderNext" aria-label="Successivo">&#10095;</button>
+
+        <div class="distilleria-slider-dots">
+            <button class="distilleria-dot active" data-slide="0"></button>
+            <button class="distilleria-dot" data-slide="1"></button>
+            <button class="distilleria-dot" data-slide="2"></button>
+            <button class="distilleria-dot" data-slide="3"></button>
+        </div>
+    </div>
+
+    <!-- PUNTI DI FORZA -->
+    <div class="container" style="padding-top:40px;padding-bottom:40px;">
+        <div class="features-grid">
+            <div class="feature-box">
+                <h3>100% Ingredienti Naturali</h3>
+                <p>Botaniche spontanee, erbe alpine certificate, scorze fresche di agrumi IGP e nessun aroma artificiale o conservante.</p>
+            </div>
+            <div class="feature-box middle">
+                <h3>Distillazione Lenta in Rame</h3>
+                <p>Metodo discontinuo a bagnomaria in alambicchi di rame tradizionali e affinamento in pregiate botti di rovere.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Spedizione Sicura e Veloce</h3>
+                <p>Imballaggi protettivi anti-rottura brevettati per bottiglie in vetro e consegna espressa in 24/48 ore in tutta Italia.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CREAZIONI IN EVIDENZA -->
+    <div class="container" style="padding-top:20px;padding-bottom:50px;">
+        <div class="section-header">
+            <h2>Le Nostre Creazioni in Evidenza</h2>
+            <p>Scopri la selezione dei nostri distillati e liquori più amati da enoteche ed intenditori.</p>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="category-filter">
+            <button class="filter-btn active" data-category="all">Tutti i Prodotti</button>
+            <button class="filter-btn" data-category="amari-digestivi">Amari &amp; Digestivi</button>
+            <button class="filter-btn" data-category="grappe-distillati">Grappe &amp; Distillati</button>
+            <button class="filter-btn" data-category="liquori-tradizionali">Liquori Tradizionali</button>
+            <button class="filter-btn" data-category="gin-spirits">Gin &amp; Spirits</button>
+            <button class="filter-btn" data-category="creme-liquore">Creme</button>
+        </div>
+
+        <div class="products-grid">
+            
+        <div class="product-card" data-category="liquori-tradizionali">
+            <div class="product-image-wrap">
+                <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80" alt="Limoncello Artigianale di Sorrento IGP (500ml)" loading="lazy">
+                <span class="product-badge">Sorrento IGP</span>
+            </div>
+            <div class="product-body">
+                <span class="product-cat">Liquori Tradizionali</span>
+                <h3 class="product-title">Limoncello Artigianale di Sorrento IGP (500ml)</h3>
+                <p class="product-desc">Autentico liquore ai limoni di Sorrento IGP, 30% Vol. Profumo intenso e gusto rinfrescante.</p>
+                <div class="product-footer">
+                    <div class="product-price">18.50 €</div>
+                    <button class="btn-buy" data-id="1" data-name="Limoncello Artigianale di Sorrento IGP (500ml)" data-price="18.5" data-image="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80">Acquista</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-card" data-category="amari-digestivi">
+            <div class="product-image-wrap">
+                <img src="https://images.unsplash.com/photo-1527061011665-3652c757a4d4?w=800&q=80" alt="Amaro alle Erbe Alpine e Radici Selvagge (700ml)" loading="lazy">
+                <span class="product-badge">Macerazione a Freddo</span>
+            </div>
+            <div class="product-body">
+                <span class="product-cat">Amari & Digestivi</span>
+                <h3 class="product-title">Amaro alle Erbe Alpine e Radici Selvagge (700ml)</h3>
+                <p class="product-desc">Infuso di 28 erbe alpine, genziana, rabarbaro e assenzio. Amaro equilibrato e balsamico, 32% Vol.</p>
+                <div class="product-footer">
+                    <div class="product-price">24.00 €</div>
+                    <button class="btn-buy" data-id="2" data-name="Amaro alle Erbe Alpine e Radici Selvagge (700ml)" data-price="24.0" data-image="https://images.unsplash.com/photo-1527061011665-3652c757a4d4?w=800&q=80">Acquista</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-card" data-category="grappe-distillati">
+            <div class="product-image-wrap">
+                <img src="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800&q=80" alt="Grappa Barricata Invecchiata 5 Anni in Rovere (700ml)" loading="lazy">
+                <span class="product-badge">In Offerta</span>
+            </div>
+            <div class="product-body">
+                <span class="product-cat">Grappe & Distillati</span>
+                <h3 class="product-title">Grappa Barricata Invecchiata 5 Anni in Rovere (700ml)</h3>
+                <p class="product-desc">Grappa di vinacce selezionate affinata 5 anni in botti di rovere francese. Colore ambrato caldo, 42% Vol.</p>
+                <div class="product-footer">
+                    <div class="product-price"><del>38.00 €</del>34.50 €</div>
+                    <button class="btn-buy" data-id="3" data-name="Grappa Barricata Invecchiata 5 Anni in Rovere (700ml)" data-price="34.5" data-image="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800&q=80">Acquista</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-card" data-category="gin-spirits">
+            <div class="product-image-wrap">
+                <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&q=80" alt="Gin Botanico Italiano con Agrumi del Mediterraneo (700ml)" loading="lazy">
+                <span class="product-badge">Pot Still</span>
+            </div>
+            <div class="product-body">
+                <span class="product-cat">Gin & Spirits</span>
+                <h3 class="product-title">Gin Botanico Italiano con Agrumi del Mediterraneo (700ml)</h3>
+                <p class="product-desc">Distilled Dry Gin premium con ginepro toscano, bergamotto calabrese e rosmarino, 43% Vol.</p>
+                <div class="product-footer">
+                    <div class="product-price">38.00 €</div>
+                    <button class="btn-buy" data-id="4" data-name="Gin Botanico Italiano con Agrumi del Mediterraneo (700ml)" data-price="38.0" data-image="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&q=80">Acquista</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-card" data-category="liquori-tradizionali">
+            <div class="product-image-wrap">
+                <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=800&q=80" alt="Mirto Tradizionale di Sardegna - Bacche Selvagge (700ml)" loading="lazy">
+                <span class="product-badge">Raccolta a Mano</span>
+            </div>
+            <div class="product-body">
+                <span class="product-cat">Liquori Tradizionali</span>
+                <h3 class="product-title">Mirto Tradizionale di Sardegna - Bacche Selvagge (700ml)</h3>
+                <p class="product-desc">Liquore di puro mirto rosso sardo da bacche fresche selvatiche raccolte a mano, 30% Vol.</p>
+                <div class="product-footer">
+                    <div class="product-price">21.00 €</div>
+                    <button class="btn-buy" data-id="5" data-name="Mirto Tradizionale di Sardegna - Bacche Selvagge (700ml)" data-price="21.0" data-image="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=800&q=80">Acquista</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-card" data-category="amari-digestivi">
+            <div class="product-image-wrap">
+                <img src="https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?w=800&q=80" alt="Nocino Riserva Tradizionale da Mallo Fresco (500ml)" loading="lazy">
+                <span class="product-badge">Notte di S. Giovanni</span>
+            </div>
+            <div class="product-body">
+                <span class="product-cat">Amari & Digestivi</span>
+                <h3 class="product-title">Nocino Riserva Tradizionale da Mallo Fresco (500ml)</h3>
+                <p class="product-desc">Nocino artigianale da noci fresche raccolte la notte di San Giovanni, affinato 24 mesi, 38% Vol.</p>
+                <div class="product-footer">
+                    <div class="product-price">26.50 €</div>
+                    <button class="btn-buy" data-id="6" data-name="Nocino Riserva Tradizionale da Mallo Fresco (500ml)" data-price="26.5" data-image="https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?w=800&q=80">Acquista</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-card" data-category="liquori-tradizionali">
+            <div class="product-image-wrap">
+                <img src="https://images.unsplash.com/photo-1568644396922-5c3bfae12521?w=800&q=80" alt="Liquore Artigianale alla Liquirizia di Calabria DOP (500ml)" loading="lazy">
+                <span class="product-badge">Calabria DOP</span>
+            </div>
+            <div class="product-body">
+                <span class="product-cat">Liquori Tradizionali</span>
+                <h3 class="product-title">Liquore Artigianale alla Liquirizia di Calabria DOP (500ml)</h3>
+                <p class="product-desc">Pura liquirizia di Calabria DOP in polvere finissima. Liquore nero, denso e vellutato, 25% Vol.</p>
+                <div class="product-footer">
+                    <div class="product-price">19.00 €</div>
+                    <button class="btn-buy" data-id="7" data-name="Liquore Artigianale alla Liquirizia di Calabria DOP (500ml)" data-price="19.0" data-image="https://images.unsplash.com/photo-1568644396922-5c3bfae12521?w=800&q=80">Acquista</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-card" data-category="liquori-tradizionali">
+            <div class="product-image-wrap">
+                <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=800&q=80" alt="Sambuca Stellata Extra Superiore (700ml)" loading="lazy">
+                <span class="product-badge">Anice Stellato</span>
+            </div>
+            <div class="product-body">
+                <span class="product-cat">Liquori Tradizionali</span>
+                <h3 class="product-title">Sambuca Stellata Extra Superiore (700ml)</h3>
+                <p class="product-desc">Distillato di anice stellato, finocchietto selvatico ed erbe aromatiche. Cristallina e profumata, 40% Vol.</p>
+                <div class="product-footer">
+                    <div class="product-price">22.50 €</div>
+                    <button class="btn-buy" data-id="8" data-name="Sambuca Stellata Extra Superiore (700ml)" data-price="22.5" data-image="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=800&q=80">Acquista</button>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+
+        <div style="text-align:center;margin-top:45px;">
+            <a href="negozio.html" class="distilleria-btn distilleria-btn-primary">Visualizza Tutto il Catalogo &rarr;</a>
+        </div>
+    </div>
+
+    <!-- STORIA & VISITE -->
+    <section class="story-section">
+        <div class="story-grid">
+            <div class="story-content">
+                <h2>Una Storia di Passione, Radici e Territorio</h2>
+                <p>Nel nostro laboratorio artigianale ogni ricetta nasce dal rispetto per i ritmi della natura. Raccogliamo a mano le erbe selvatiche nel momento balsamico perfetto, selezioniamo le migliori vinacce fresche e utilizziamo alcol di pura origine agricola.</p>
+                <p>Dagli amari digestivi ricchi di spezie nobili, al limoncello vellutato con agrumi certificati, ogni nostra bottiglia racchiude profumi autentici ed inconfondibili.</p>
+                <a href="chi-siamo.html" style="color:var(--distilleria-amber);font-weight:700;text-decoration:underline;">Scopri di più sulla nostra storia &rarr;</a>
+            </div>
+            <div class="tasting-box">
+                <h3>Visita la Distilleria &amp; Sala Degustazioni</h3>
+                <p>Organizziamo percorsi guidati con il Mastro Distillatore per scoprire i segreti dell'alambicco e assaggiare i liquori abbinati a prodotti tipici.</p>
+                <ul class="tasting-list">
+                    <li>✓ <strong>Orari Visite:</strong> Lun - Sab dalle 10:00 alle 18:30</li>
+                    <li>✓ <strong>Degustazioni:</strong> Su prenotazione (gruppi e singoli)</li>
+                    <li>✓ <strong>Punto Vendita Diretto:</strong> Sempre aperto con confezioni regalo</li>
+                </ul>
+                <a href="contatti.html" class="distilleria-btn distilleria-btn-primary" style="display:block;text-align:center;">Richiedi Informazioni</a>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <img src="assets/logo.svg" alt="Distilleria AfterBit" style="height:44px;margin-bottom:15px;filter:brightness(0) invert(1);">
+                <p>Distilleria artigianale d'eccellenza. Liquori, amari e distillati della grande tradizione italiana ottenuti con 100% ingredienti naturali.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Link Rapidi</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="negozio.html">Catalogo Liquori</a></li>
+                    <li><a href="chi-siamo.html">La Nostra Storia</a></li>
+                    <li><a href="contatti.html">Visite &amp; Degustazioni</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contatti &amp; Bottega</h4>
+                <p>📍 Via delle Distillerie 10, 20121 Milano (MI)</p>
+                <p>📞 +39 02 87654321</p>
+                <p>✉️ info@afterbit.it</p>
+                <p>🕒 Lun - Sab: 09:00 - 13:00 / 14:30 - 19:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 <strong>Distilleria AfterBit</strong> - Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <h3>Il Tuo Carrello</h3>
+            <button class="cart-drawer-close" id="cartDrawerClose">&times;</button>
+        </div>
+        <div class="cart-drawer-body" id="cartDrawerBody">
+            <p style="color:#777;text-align:center;margin-top:40px;">Il tuo carrello è vuoto.</p>
+        </div>
+        <div class="cart-drawer-footer">
+            <div class="cart-total-row">
+                <span>Totale:</span>
+                <span id="cartDrawerTotal">0,00 €</span>
+            </div>
+            <button class="btn-buy" style="width:100%;text-align:center;" onclick="alert('Demo Client Showcase: checkout simulato con successo!')">Procedi all'Ordine</button>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-notification" id="toastNotification">✓ Prodotto aggiunto!</div>
+
+    <!-- Back to top button (Gold / Amber) -->
+    <a href="#" class="ast-scroll-top" id="scrollTopBtn" aria-label="Torna su">
+        <svg viewBox="0 0 24 24">
+            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+        </svg>
+    </a>
+
+    <script src="assets/main.js"></script>
+    
+</body>
+</html>

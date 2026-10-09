@@ -355,6 +355,29 @@ body {
 }
 
 /* ==========================================================================
+   PULSANTE "TORNA SU" (BACK TO TOP) IN BASSO A DESTRA
+   ========================================================================== */
+.ast-scroll-top {
+    background-color: var(--distilleria-gold) !important;
+    color: var(--distilleria-dark) !important;
+    border: 1px solid var(--distilleria-gold) !important;
+    box-shadow: 0 6px 18px rgba(197, 155, 39, 0.28) !important;
+}
+
+.ast-scroll-top:hover {
+    background-color: var(--distilleria-gold-hover) !important;
+    border-color: var(--distilleria-gold-hover) !important;
+}
+
+.ast-scroll-top .ast-scroll-top-icon,
+.ast-scroll-top .ast-icon,
+.ast-scroll-top svg,
+.ast-scroll-top i {
+    color: var(--distilleria-dark) !important;
+    fill: var(--distilleria-dark) !important;
+}
+
+/* ==========================================================================
    RIMOZIONE CREDITI FOOTER "POWERED BY ASTRA"
    ========================================================================== */
 .ast-footer-copyright a[href*="wpastra"],

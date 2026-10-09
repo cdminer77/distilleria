@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degustazioni &amp; Contatti – Distilleria AfterBit</title>
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-wrapper">
+                <img src="assets/logo.svg" alt="Distilleria AfterBit Logo">
+            </a>
+            <nav class="main-nav">
+                <a href="index.html" class="">Home</a>
+                <a href="negozio.html" class="">I Nostri Liquori</a>
+                <a href="negozio.html?cat=amari-digestivi">Amari &amp; Digestivi</a>
+                <a href="negozio.html?cat=grappe-distillati">Grappe &amp; Distillati</a>
+                <a href="chi-siamo.html" class="">Chi Siamo</a>
+                <a href="contatti.html" class="active">Degustazioni &amp; Contatti</a>
+            </nav>
+            <button class="cart-button-header" aria-label="Visualizza carrello">
+                <span>🛒 Carrello</span>
+                <span class="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+    
+
+    <div style="background:var(--distilleria-dark);color:#fff;padding:60px 20px;text-align:center;">
+        <span class="distilleria-slide-badge">Vieni a Trovarci</span>
+        <h1 style="font-family:var(--font-heading);font-size:2.8rem;margin-top:10px;">Bottega, Alambicchi &amp; Sala Degustazioni</h1>
+        <p style="color:#d5cfc5;max-width:700px;margin:15px auto 0;font-size:1.1rem;">Accogliamo appassionati, enoteche, ristoratori e curiosi per scoprire i segreti della distillazione artigianale e assaporare i nostri spirits.</p>
+    </div>
+
+    <div class="container">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:50px;align-items:start;">
+            <div>
+                <h2 style="font-family:var(--font-heading);font-size:2rem;color:var(--distilleria-dark);margin-bottom:16px;">Informazioni &amp; Recapiti</h2>
+                <p style="color:#555;line-height:1.7;margin-bottom:24px;">La distilleria è facilmente raggiungibile ed è aperta sia per acquisti diretti in bottega sia per percorsi guidati ed eventi privati su prenotazione.</p>
+                
+                <div style="background:#f9f8f5;padding:25px;border-radius:8px;border-left:4px solid var(--distilleria-gold);">
+                    <p style="margin-bottom:12px;">📍 <strong>Indirizzo:</strong> Via delle Distillerie 10, 20121 Milano (MI)</p>
+                    <p style="margin-bottom:12px;">📞 <strong>Telefono:</strong> +39 02 87654321</p>
+                    <p style="margin-bottom:12px;">✉️ <strong>Email commerciale:</strong> info@afterbit.it</p>
+                    <p style="margin-bottom:12px;">🕒 <strong>Orari Bottega:</strong> Lun - Sab: 09:00 - 13:00 / 14:30 - 19:00</p>
+                    <p style="margin-bottom:0;">🍷 <strong>Degustazioni Guidate:</strong> Lun - Sab alle 11:30 e alle 17:30 (su prenotazione)</p>
+                </div>
+            </div>
+
+            <div style="background:#ffffff;padding:35px;border-radius:8px;border:1px solid var(--border-color);box-shadow:0 8px 24px rgba(0,0,0,0.05);">
+                <h3 style="font-family:var(--font-heading);color:var(--distilleria-dark);font-size:1.4rem;margin-bottom:12px;">Prenota Percorso Degustazione</h3>
+                <p style="color:#666;font-size:0.92rem;line-height:1.6;margin-bottom:20px;">Compila il form per richiedere la disponibilità per te o il tuo gruppo. Ti ricontatteremo entro 24 ore.</p>
+                
+                <form onsubmit="alert('Grazie per la richiesta! Il nostro Mastro Distillatore ti ricontatterà a breve.'); return false;">
+                    <div style="margin-bottom:15px;">
+                        <label style="display:block;font-size:0.9rem;font-weight:600;margin-bottom:5px;">Nome e Cognome *</label>
+                        <input type="text" required style="width:100%;padding:10px;border:1px solid #ccc;border-radius:4px;font-family:inherit;">
+                    </div>
+                    <div style="margin-bottom:15px;">
+                        <label style="display:block;font-size:0.9rem;font-weight:600;margin-bottom:5px;">Email *</label>
+                        <input type="email" required style="width:100%;padding:10px;border:1px solid #ccc;border-radius:4px;font-family:inherit;">
+                    </div>
+                    <div style="margin-bottom:15px;">
+                        <label style="display:block;font-size:0.9rem;font-weight:600;margin-bottom:5px;">Numero di persone e data preferita</label>
+                        <input type="text" placeholder="Es. 4 persone - Sabato 18 Ottobre" style="width:100%;padding:10px;border:1px solid #ccc;border-radius:4px;font-family:inherit;">
+                    </div>
+                    <div style="margin-bottom:20px;">
+                        <label style="display:block;font-size:0.9rem;font-weight:600;margin-bottom:5px;">Note o richieste speciali</label>
+                        <textarea rows="3" style="width:100%;padding:10px;border:1px solid #ccc;border-radius:4px;font-family:inherit;"></textarea>
+                    </div>
+                    <button type="submit" class="btn-buy" style="width:100%;">Invia Richiesta Prenotazione</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <img src="assets/logo.svg" alt="Distilleria AfterBit" style="height:44px;margin-bottom:15px;filter:brightness(0) invert(1);">
+                <p>Distilleria artigianale d'eccellenza. Liquori, amari e distillati della grande tradizione italiana ottenuti con 100% ingredienti naturali.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Link Rapidi</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="negozio.html">Catalogo Liquori</a></li>
+                    <li><a href="chi-siamo.html">La Nostra Storia</a></li>
+                    <li><a href="contatti.html">Visite &amp; Degustazioni</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contatti &amp; Bottega</h4>
+                <p>📍 Via delle Distillerie 10, 20121 Milano (MI)</p>
+                <p>📞 +39 02 87654321</p>
+                <p>✉️ info@afterbit.it</p>
+                <p>🕒 Lun - Sab: 09:00 - 13:00 / 14:30 - 19:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 <strong>Distilleria AfterBit</strong> - Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <h3>Il Tuo Carrello</h3>
+            <button class="cart-drawer-close" id="cartDrawerClose">&times;</button>
+        </div>
+        <div class="cart-drawer-body" id="cartDrawerBody">
+            <p style="color:#777;text-align:center;margin-top:40px;">Il tuo carrello è vuoto.</p>
+        </div>
+        <div class="cart-drawer-footer">
+            <div class="cart-total-row">
+                <span>Totale:</span>
+                <span id="cartDrawerTotal">0,00 €</span>
+            </div>
+            <button class="btn-buy" style="width:100%;text-align:center;" onclick="alert('Demo Client Showcase: checkout simulato con successo!')">Procedi all'Ordine</button>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-notification" id="toastNotification">✓ Prodotto aggiunto!</div>
+
+    <!-- Back to top button (Gold / Amber) -->
+    <a href="#" class="ast-scroll-top" id="scrollTopBtn" aria-label="Torna su">
+        <svg viewBox="0 0 24 24">
+            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+        </svg>
+    </a>
+
+    <script src="assets/main.js"></script>
+    
+</body>
+</html>

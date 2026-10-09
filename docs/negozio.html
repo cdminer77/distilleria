@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Nostri Liquori – Catalogo Completo – Distilleria AfterBit</title>
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-wrapper">
+                <img src="assets/logo.svg" alt="Distilleria AfterBit Logo">
+            </a>
+            <nav class="main-nav">
+                <a href="index.html" class="">Home</a>
+                <a href="negozio.html" class="active">I Nostri Liquori</a>
+                <a href="negozio.html?cat=amari-digestivi">Amari &amp; Digestivi</a>
+                <a href="negozio.html?cat=grappe-distillati">Grappe &amp; Distillati</a>
+                <a href="chi-siamo.html" class="">Chi Siamo</a>
+                <a href="contatti.html" class="">Degustazioni &amp; Contatti</a>
+            </nav>
+            <button class="cart-button-header" aria-label="Visualizza carrello">
+                <span>🛒 Carrello</span>
+                <span class="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+    
+
+    <div style="background:var(--distilleria-dark);color:#fff;padding:60px 20px;text-align:center;">
+        <span class="distilleria-slide-badge">Catalogo Artigianale</span>
+        <h1 style="font-family:var(--font-heading);font-size:2.8rem;margin-top:10px;">I Nostri Liquori &amp; Distillati</h1>
+        <p style="color:#d5cfc5;max-width:700px;margin:15px auto 0;font-size:1.1rem;">Esplora l'intera produzione della bottega. Tutti i nostri distillati sono preparati a piccoli lotti con ingredienti naturali e spediti in imballaggi brevettati anti-rottura.</p>
+    </div>
+
+    <div class="container">
+        <!-- Category Filter -->
+        <div class="category-filter">
+            <button class="filter-btn active" data-category="all">Tutti (10)</button>
+            <button class="filter-btn" data-category="amari-digestivi">Amari &amp; Digestivi</button>
+            <button class="filter-btn" data-category="grappe-distillati">Grappe &amp; Distillati</button>
+            <button class="filter-btn" data-category="liquori-tradizionali">Liquori Tradizionali</button>
+            <button class="filter-btn" data-category="gin-spirits">Gin &amp; Spirits</button>
+            <button class="filter-btn" data-category="creme-liquore">Creme di Liquore</button>
+        </div>
+
+        <div class="products-grid">
+            
+        <div class="product-card" data-category="liquori-tradizionali">
+            <div class="product-image-wrap">
+                <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80" alt="Limoncello Artigianale di Sorrento IGP (500ml)" loading="lazy">
+                <span class="product-badge">Sorrento IGP</span>
+            </div>
+            <div class="product-body">
+                <span class="product-cat">Liquori Tradizionali</span>
+                <h3 class="product-title">Limoncello Artigianale di Sorrento IGP (500ml)</h3>
+                <p class="product-desc">Autentico liquore ai limoni di Sorrento IGP, 30% Vol. Profumo intenso e gusto rinfrescante.</p>
+                <div class="product-footer">
+                    <div class="product-price">18.50 €</div>
+                    <button class="btn-buy" data-id="1" data-name="Limoncello Artigianale di Sorrento IGP (500ml)" data-price="18.5" data-image="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80">Acquista</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-card" data-category="amari-digestivi">
+            <div class="product-image-wrap">
+                <img src="https://images.unsplash.com/photo-1527061011665-3652c757a4d4?w=800&q=80" alt="Amaro alle Erbe Alpine e Radici Selvagge (700ml)" loading="lazy">
+                <span class="product-badge">Macerazione a Freddo</span>
+            </div>
+            <div class="product-body">
+                <span class="product-cat">Amari & Digestivi</span>
+                <h3 class="product-title">Amaro alle Erbe Alpine e Radici Selvagge (700ml)</h3>
+                <p class="product-desc">Infuso di 28 erbe alpine, genziana, rabarbaro e assenzio. Amaro equilibrato e balsamico, 32% Vol.</p>
+                <div class="product-footer">
+                    <div class="product-price">24.00 €</div>
+                    <button class="btn-buy" data-id="2" data-name="Amaro alle Erbe Alpine e Radici Selvagge (700ml)" data-price="24.0" data-image="https://images.unsplash.com/photo-1527061011665-3652c757a4d4?w=800&q=80">Acquista</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-card" data-category="grappe-distillati">
+            <div class="product-image-wrap">
+                <img src="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800&q=80" alt="Grappa Barricata Invecchiata 5 Anni in Rovere (700ml)" loading="lazy">
+                <span class="product-badge">In Offerta</span>
+            </div>
+            <div class="product-body">
+                <span class="product-cat">Grappe & Distillati</span>
+                <h3 class="product-title">Grappa Barricata Invecchiata 5 Anni in Rovere (700ml)</h3>
+                <p class="product-desc">Grappa di vinacce selezionate affinata 5 anni in botti di rovere francese. Colore ambrato caldo, 42% Vol.</p>
+                <div class="product-footer">
+                    <div class="product-price"><del>38.00 €</del>34.50 €</div>
+                    <button class="btn-buy" data-id="3" data-name="Grappa Barricata Invecchiata 5 Anni in Rovere (700ml)" data-price="34.5" data-image="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800&q=80">Acquista</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-card" data-category="gin-spirits">
+            <div class="product-image-wrap">
+                <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&q=80" alt="Gin Botanico Italiano con Agrumi del Mediterraneo (700ml)" loading="lazy">
+                <span class="product-badge">Pot Still</span>
+            </div>
+            <div class="product-body">
+                <span class="product-cat">Gin & Spirits</span>
+                <h3 class="product-title">Gin Botanico Italiano con Agrumi del Mediterraneo (700ml)</h3>
+                <p class="product-desc">Distilled Dry Gin premium con ginepro toscano, bergamotto calabrese e rosmarino, 43% Vol.</p>
+                <div class="product-footer">
+                    <div class="product-price">38.00 €</div>
+                    <button class="btn-buy" data-id="4" data-name="Gin Botanico Italiano con Agrumi del Mediterraneo (700ml)" data-price="38.0" data-image="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&q=80">Acquista</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-card" data-category="liquori-tradizionali">
+            <div class="product-image-wrap">
+                <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=800&q=80" alt="Mirto Tradizionale di Sardegna - Bacche Selvagge (700ml)" loading="lazy">
+                <span class="product-badge">Raccolta a Mano</span>
+            </div>
+            <div class="product-body">
+                <span class="product-cat">Liquori Tradizionali</span>
+                <h3 class="product-title">Mirto Tradizionale di Sardegna - Bacche Selvagge (700ml)</h3>
+                <p class="product-desc">Liquore di puro mirto rosso sardo da bacche fresche selvatiche raccolte a mano, 30% Vol.</p>
+                <div class="product-footer">
+                    <div class="product-price">21.00 €</div>
+                    <button class="btn-buy" data-id="5" data-name="Mirto Tradizionale di Sardegna - Bacche Selvagge (700ml)" data-price="21.0" data-image="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=800&q=80">Acquista</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-card" data-category="amari-digestivi">
+            <div class="product-image-wrap">
+                <img src="https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?w=800&q=80" alt="Nocino Riserva Tradizionale da Mallo Fresco (500ml)" loading="lazy">
+                <span class="product-badge">Notte di S. Giovanni</span>
+            </div>
+            <div class="product-body">
+                <span class="product-cat">Amari & Digestivi</span>
+                <h3 class="product-title">Nocino Riserva Tradizionale da Mallo Fresco (500ml)</h3>
+                <p class="product-desc">Nocino artigianale da noci fresche raccolte la notte di San Giovanni, affinato 24 mesi, 38% Vol.</p>
+                <div class="product-footer">
+                    <div class="product-price">26.50 €</div>
+                    <button class="btn-buy" data-id="6" data-name="Nocino Riserva Tradizionale da Mallo Fresco (500ml)" data-price="26.5" data-image="https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?w=800&q=80">Acquista</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-card" data-category="liquori-tradizionali">
+            <div class="product-image-wrap">
+                <img src="https://images.unsplash.com/photo-1568644396922-5c3bfae12521?w=800&q=80" alt="Liquore Artigianale alla Liquirizia di Calabria DOP (500ml)" loading="lazy">
+                <span class="product-badge">Calabria DOP</span>
+            </div>
+            <div class="product-body">
+                <span class="product-cat">Liquori Tradizionali</span>
+                <h3 class="product-title">Liquore Artigianale alla Liquirizia di Calabria DOP (500ml)</h3>
+                <p class="product-desc">Pura liquirizia di Calabria DOP in polvere finissima. Liquore nero, denso e vellutato, 25% Vol.</p>
+                <div class="product-footer">
+                    <div class="product-price">19.00 €</div>
+                    <button class="btn-buy" data-id="7" data-name="Liquore Artigianale alla Liquirizia di Calabria DOP (500ml)" data-price="19.0" data-image="https://images.unsplash.com/photo-1568644396922-5c3bfae12521?w=800&q=80">Acquista</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-card" data-category="liquori-tradizionali">
+            <div class="product-image-wrap">
+                <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=800&q=80" alt="Sambuca Stellata Extra Superiore (700ml)" loading="lazy">
+                <span class="product-badge">Anice Stellato</span>
+            </div>
+            <div class="product-body">
+                <span class="product-cat">Liquori Tradizionali</span>
+                <h3 class="product-title">Sambuca Stellata Extra Superiore (700ml)</h3>
+                <p class="product-desc">Distillato di anice stellato, finocchietto selvatico ed erbe aromatiche. Cristallina e profumata, 40% Vol.</p>
+                <div class="product-footer">
+                    <div class="product-price">22.50 €</div>
+                    <button class="btn-buy" data-id="8" data-name="Sambuca Stellata Extra Superiore (700ml)" data-price="22.5" data-image="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=800&q=80">Acquista</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-card" data-category="creme-liquore">
+            <div class="product-image-wrap">
+                <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&q=80" alt="Crema di Melone Cantalupo & Panna Fresca (500ml)" loading="lazy">
+                <span class="product-badge">Panna Fresca</span>
+            </div>
+            <div class="product-body">
+                <span class="product-cat">Creme di Liquore</span>
+                <h3 class="product-title">Crema di Melone Cantalupo & Panna Fresca (500ml)</h3>
+                <p class="product-desc">Crema vellutata e dolce con puro succo di melone Cantalupo maturo e panna fresca, 17% Vol.</p>
+                <div class="product-footer">
+                    <div class="product-price">16.90 €</div>
+                    <button class="btn-buy" data-id="9" data-name="Crema di Melone Cantalupo & Panna Fresca (500ml)" data-price="16.9" data-image="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&q=80">Acquista</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-card" data-category="amari-digestivi">
+            <div class="product-image-wrap">
+                <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=800&q=80" alt="Vermouth Rosso Superiore Artigianale (750ml)" loading="lazy">
+                <span class="product-badge">In Offerta</span>
+            </div>
+            <div class="product-body">
+                <span class="product-cat">Amari & Digestivi</span>
+                <h3 class="product-title">Vermouth Rosso Superiore Artigianale (750ml)</h3>
+                <p class="product-desc">Vermouth storico su base vino piemontese aromatizzato con artemisia, vaniglia e scorze di chinotto, 18% Vol.</p>
+                <div class="product-footer">
+                    <div class="product-price"><del>29.50 €</del>27.00 €</div>
+                    <button class="btn-buy" data-id="10" data-name="Vermouth Rosso Superiore Artigianale (750ml)" data-price="27.0" data-image="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=800&q=80">Acquista</button>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+
+    
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <img src="assets/logo.svg" alt="Distilleria AfterBit" style="height:44px;margin-bottom:15px;filter:brightness(0) invert(1);">
+                <p>Distilleria artigianale d'eccellenza. Liquori, amari e distillati della grande tradizione italiana ottenuti con 100% ingredienti naturali.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Link Rapidi</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="negozio.html">Catalogo Liquori</a></li>
+                    <li><a href="chi-siamo.html">La Nostra Storia</a></li>
+                    <li><a href="contatti.html">Visite &amp; Degustazioni</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contatti &amp; Bottega</h4>
+                <p>📍 Via delle Distillerie 10, 20121 Milano (MI)</p>
+                <p>📞 +39 02 87654321</p>
+                <p>✉️ info@afterbit.it</p>
+                <p>🕒 Lun - Sab: 09:00 - 13:00 / 14:30 - 19:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 <strong>Distilleria AfterBit</strong> - Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <h3>Il Tuo Carrello</h3>
+            <button class="cart-drawer-close" id="cartDrawerClose">&times;</button>
+        </div>
+        <div class="cart-drawer-body" id="cartDrawerBody">
+            <p style="color:#777;text-align:center;margin-top:40px;">Il tuo carrello è vuoto.</p>
+        </div>
+        <div class="cart-drawer-footer">
+            <div class="cart-total-row">
+                <span>Totale:</span>
+                <span id="cartDrawerTotal">0,00 €</span>
+            </div>
+            <button class="btn-buy" style="width:100%;text-align:center;" onclick="alert('Demo Client Showcase: checkout simulato con successo!')">Procedi all'Ordine</button>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-notification" id="toastNotification">✓ Prodotto aggiunto!</div>
+
+    <!-- Back to top button (Gold / Amber) -->
+    <a href="#" class="ast-scroll-top" id="scrollTopBtn" aria-label="Torna su">
+        <svg viewBox="0 0 24 24">
+            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+        </svg>
+    </a>
+
+    <script src="assets/main.js"></script>
+    
+</body>
+</html>

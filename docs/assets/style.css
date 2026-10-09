@@ -1,0 +1,841 @@
+/* Stili Distilleria AfterBit Static Demo */
+:root {
+    --distilleria-gold: #c59b27;
+    --distilleria-gold-hover: #a88219;
+    --distilleria-dark: #1a1918;
+    --distilleria-dark-light: #262422;
+    --distilleria-amber: #8b5a2b;
+    --distilleria-amber-hover: #6d441e;
+    --distilleria-cream: #f8f6f0;
+    --distilleria-cream-dark: #f0ece1;
+    --text-color: #333333;
+    --text-muted: #666666;
+    --border-color: #e5e0d8;
+    --font-heading: 'Cinzel', 'Playfair Display', Georgia, serif;
+    --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text-color);
+    background-color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+/* TOP BAR & HEADER */
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.header-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-wrapper img {
+    height: 52px;
+    width: auto;
+    display: block;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.main-nav a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--distilleria-dark);
+    padding: 8px 0;
+    position: relative;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--distilleria-amber);
+}
+
+.main-nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--distilleria-amber);
+}
+
+.cart-button-header {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--distilleria-cream);
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.cart-button-header:hover {
+    background: var(--distilleria-amber);
+    color: #fff;
+    border-color: var(--distilleria-amber);
+}
+
+.cart-count {
+    background: var(--distilleria-amber);
+    color: #ffffff;
+    font-size: 0.75rem;
+    padding: 2px 7px;
+    border-radius: 10px;
+}
+
+.cart-button-header:hover .cart-count {
+    background: #ffffff;
+    color: var(--distilleria-amber);
+}
+
+/* HERO SLIDER */
+.distilleria-slider-container {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    min-height: 560px;
+    overflow: hidden;
+    background: #111;
+}
+
+.distilleria-slides-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 560px;
+}
+
+.distilleria-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 560px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    transform: scale(1.03);
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.distilleria-slide.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    z-index: 2;
+}
+
+.distilleria-slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(20, 18, 16, 0.68) 0%, rgba(20, 18, 16, 0.88) 100%);
+    z-index: 2;
+}
+
+.distilleria-slide-content {
+    position: relative;
+    z-index: 3;
+    max-width: 950px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.distilleria-slide-badge {
+    display: inline-block;
+    background: rgba(197, 155, 39, 0.18);
+    color: var(--distilleria-gold);
+    border: 1px solid var(--distilleria-gold);
+    padding: 6px 18px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.distilleria-slide-title {
+    font-size: 3.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.15;
+    margin: 0 0 18px 0;
+    font-family: var(--font-heading);
+}
+
+.distilleria-slide-title span {
+    color: var(--distilleria-gold);
+}
+
+.distilleria-slide-desc {
+    font-size: 1.25rem;
+    color: #e4dfd7;
+    max-width: 800px;
+    margin: 0 auto 32px auto;
+    line-height: 1.65;
+}
+
+.distilleria-slide-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.distilleria-btn {
+    display: inline-block;
+    padding: 14px 34px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.distilleria-btn-primary {
+    background-color: var(--distilleria-gold);
+    color: var(--distilleria-dark) !important;
+    border: 2px solid var(--distilleria-gold);
+}
+
+.distilleria-btn-primary:hover {
+    background-color: var(--distilleria-gold-hover);
+    border-color: var(--distilleria-gold-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(197, 155, 39, 0.35);
+}
+
+.distilleria-btn-outline {
+    background-color: transparent;
+    color: #ffffff !important;
+    border: 2px solid #ffffff;
+}
+
+.distilleria-btn-outline:hover {
+    background-color: #ffffff;
+    color: var(--distilleria-dark) !important;
+    transform: translateY(-2px);
+}
+
+.distilleria-slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.45);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.6rem;
+    z-index: 10;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.distilleria-slider-arrow:hover {
+    background: var(--distilleria-gold);
+    color: var(--distilleria-dark);
+    border-color: var(--distilleria-gold);
+}
+
+.distilleria-arrow-prev { left: 30px; }
+.distilleria-arrow-next { right: 30px; }
+
+.distilleria-slider-dots {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.distilleria-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.45);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    padding: 0;
+}
+
+.distilleria-dot.active {
+    background: var(--distilleria-gold);
+    width: 34px;
+    border-radius: 10px;
+}
+
+/* CONTAINER STANDARD */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 24px;
+}
+
+/* SEZIONE PUNTI DI FORZA */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+    margin-top: -30px;
+    position: relative;
+    z-index: 5;
+}
+
+.feature-box {
+    background: #f8f6f0;
+    padding: 34px 28px;
+    border-radius: 6px;
+    border-top: 3px solid var(--distilleria-gold);
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+}
+
+.feature-box.middle {
+    border-top-color: var(--distilleria-amber);
+}
+
+.feature-box h3 {
+    color: var(--distilleria-dark);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.feature-box p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* SECTION TITLES */
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: var(--distilleria-dark);
+    margin-bottom: 12px;
+    font-family: var(--font-heading);
+}
+
+.section-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* CATEGORY FILTER TABS */
+.category-filter {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.filter-btn {
+    background: var(--distilleria-cream);
+    color: var(--distilleria-dark);
+    border: 1px solid var(--border-color);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--distilleria-amber);
+    color: #ffffff;
+    border-color: var(--distilleria-amber);
+}
+
+/* PRODUCTS GRID */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+.product-image-wrap {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    background: #f7f7f7;
+    overflow: hidden;
+}
+
+.product-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image-wrap img {
+    transform: scale(1.05);
+}
+
+.product-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--distilleria-gold);
+    color: var(--distilleria-dark);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.product-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-cat {
+    font-size: 0.8rem;
+    color: var(--distilleria-amber);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--distilleria-dark);
+    margin-bottom: 8px;
+    line-height: 1.35;
+    font-family: var(--font-heading);
+}
+
+.product-desc {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+.product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 14px;
+    border-top: 1px solid var(--border-color);
+}
+
+.product-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--distilleria-amber);
+}
+
+.product-price del {
+    font-size: 0.95rem;
+    color: #999;
+    margin-right: 6px;
+    font-weight: 400;
+}
+
+/* BUTTON ACQUISTA */
+.btn-buy {
+    background-color: var(--distilleria-amber) !important;
+    color: #ffffff !important;
+    border: 1px solid var(--distilleria-amber) !important;
+    padding: 10px 22px !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    border-radius: 4px !important;
+    cursor: pointer;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 6px rgba(139, 90, 43, 0.25) !important;
+}
+
+.btn-buy:hover {
+    background-color: var(--distilleria-amber-hover) !important;
+    border-color: var(--distilleria-amber-hover) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(109, 68, 30, 0.35) !important;
+}
+
+/* STORY & DEGUSTAZIONI */
+.story-section {
+    background: var(--distilleria-cream);
+    padding: 80px 24px;
+}
+
+.story-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.story-content h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--distilleria-dark);
+    margin-bottom: 18px;
+    font-family: var(--font-heading);
+}
+
+.story-content p {
+    color: #444;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: 18px;
+}
+
+.tasting-box {
+    background: #ffffff;
+    padding: 38px 32px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+    border-top: 4px solid var(--distilleria-gold);
+}
+
+.tasting-box h3 {
+    color: var(--distilleria-dark);
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    font-family: var(--font-heading);
+}
+
+.tasting-box p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.tasting-list {
+    list-style: none;
+    margin-bottom: 24px;
+}
+
+.tasting-list li {
+    padding: 6px 0;
+    color: #444;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* FOOTER */
+.site-footer {
+    background: var(--distilleria-dark);
+    color: #a8a49e;
+    padding: 60px 24px 30px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col h4 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+}
+
+.footer-col p {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a:hover {
+    color: var(--distilleria-gold);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    font-size: 0.88rem;
+    color: #888;
+}
+
+/* BACK TO TOP (GOLD / AMBER) */
+.ast-scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--distilleria-gold) !important;
+    color: var(--distilleria-dark) !important;
+    border: 1px solid var(--distilleria-gold) !important;
+    box-shadow: 0 6px 18px rgba(197, 155, 39, 0.35) !important;
+    width: 44px;
+    height: 44px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.ast-scroll-top:hover {
+    background-color: var(--distilleria-gold-hover) !important;
+    border-color: var(--distilleria-gold-hover) !important;
+    transform: translateY(-3px);
+}
+
+.ast-scroll-top svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--distilleria-dark);
+}
+
+/* CART DRAWER / MODAL */
+.cart-drawer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.cart-drawer-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cart-drawer {
+    position: fixed;
+    top: 0;
+    right: -420px;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    background: #ffffff;
+    z-index: 2001;
+    box-shadow: -5px 0 25px rgba(0,0,0,0.15);
+    transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-drawer.open {
+    right: 0;
+}
+
+.cart-drawer-header {
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-drawer-header h3 {
+    font-family: var(--font-heading);
+    color: var(--distilleria-dark);
+}
+
+.cart-drawer-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.cart-drawer-body {
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.cart-item {
+    display: flex;
+    gap: 14px;
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.cart-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cart-item-info {
+    flex-grow: 1;
+}
+
+.cart-item-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--distilleria-dark);
+}
+
+.cart-item-price {
+    font-size: 0.85rem;
+    color: var(--distilleria-amber);
+    margin-top: 4px;
+}
+
+.cart-drawer-footer {
+    padding: 20px;
+    border-top: 1px solid var(--border-color);
+    background: var(--distilleria-cream);
+}
+
+.cart-total-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--distilleria-dark);
+    margin-bottom: 16px;
+}
+
+.toast-notification {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background: var(--distilleria-dark);
+    color: #ffffff;
+    padding: 14px 24px;
+    border-radius: 6px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    border-left: 4px solid var(--distilleria-gold);
+    z-index: 3000;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.toast-notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+    .story-grid {
+        grid-template-columns: 1fr;
+    }
+    .distilleria-slide-title {
+        font-size: 2.2rem;
+    }
+    .main-nav {
+        display: none;
+    }
+}
